@@ -8,6 +8,8 @@ use Symfony\Component\Config\Resource\FileResource;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Kernel as BaseKernel;
 use Symfony\Component\Routing\RouteCollectionBuilder;
+use Nelmio\CorsBundle\NelmioCorsBundle;
+use App\Nelmio\CorsBundle;
 
 class Kernel extends BaseKernel
 {
@@ -23,6 +25,9 @@ class Kernel extends BaseKernel
                 yield new $class();
             }
         }
+        $bundles = array(
+            new NelmioCorsBundle(),
+        );
     }
 
     public function getProjectDir(): string
