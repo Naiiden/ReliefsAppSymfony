@@ -18,4 +18,4 @@ body(raw) :
 
 GET request :
 URL : http://localhost:8000/historyJson
-It should return code 200.
+It should return if should return the history.
